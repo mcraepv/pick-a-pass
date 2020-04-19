@@ -30,18 +30,90 @@ function generatePassword() {
     var charLength = characters.length;
     var output = '';
     for (var i = 0; i < length; i++) {
-      output += characters.charAt(Math.floor(Math.random() * charLength))
+      output += characters.charAt(Math.floor(Math.random() * charLength));
     }
     return output;
-    console.log(output);
   } else if (lower === true && upper === true && numbers === false && special === true) {
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
     var charLength = characters.length;
     var output = '';
     for (var i = 0; i < length; i++) {
-      output += characters.charAt(Math.floor(Math.random() * charLength))
+      output += characters.charAt(Math.floor(Math.random() * charLength));
     }
     return output;
+  } else if (lower === true && upper === true && numbers === true && special === false) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === false && upper === true && numbers === true && special === true) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === true && upper === false && numbers === true && special === true) {
+    var characters = "abcdefghijklmnopqrstuvwxyz1234567890 /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === true && upper === false && numbers === true && special === false) {
+    var characters = "abcdefghijklmnopqrstuvwxyz1234567890";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === true && upper === true && numbers === false && special === false) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === true && upper === false && numbers === false && special === true) {
+    var characters = "abcdefghijklmnopqrstuvwxyz /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === false && upper === true && numbers === true && special === false) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === false && upper === true && numbers === false && special === true) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === false && upper === false && numbers === true && special === true) {
+    var characters = "1234567890 /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else {
+    alert("Please be sure to choose at least one type of character.");
   }
 }
-
