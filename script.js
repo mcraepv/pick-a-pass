@@ -113,6 +113,37 @@ function generatePassword() {
       output += characters.charAt(Math.floor(Math.random() * charLength));
     }
     return output;
+  } else if (lower === true && upper === false && numbers === false && special === false) {
+    var characters = "abcdefghijklmnopqrstuvwxyz";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    } return output;
+  } else if (lower === false && upper === true && numbers === false && special === false) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === false && upper === false && numbers === true && special === false) {
+    var characters = "1234567890";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
+  } else if (lower === false && upper === false && numbers === false && special === true) {
+    var characters = " /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return output;
   } else {
     alert("Please be sure to choose at least one type of character.");
   }
