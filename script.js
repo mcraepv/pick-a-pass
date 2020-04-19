@@ -25,14 +25,23 @@ function generatePassword() {
     var length = prompt("How long should your password be (Please choose a character length between 8 and 128.)");
   }
 
-  if (lower === true && upper === true && special === true && numbers === true) {
+  if (lower === true && upper === true && numbers === true && special === true) {
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
     var charLength = characters.length;
     var output = '';
     for (var i = 0; i < length; i++) {
       output += characters.charAt(Math.floor(Math.random() * charLength))
     }
+    return output;
     console.log(output);
+  } else if (lower === true && upper === true && numbers === false && special === true) {
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz /'\"!#$%&)(*+,-.:;<>=?@[]\\^_~`{|}";
+    var charLength = characters.length;
+    var output = '';
+    for (var i = 0; i < length; i++) {
+      output += characters.charAt(Math.floor(Math.random() * charLength))
+    }
+    return output;
   }
-
 }
+
