@@ -33,7 +33,7 @@ function generatePassword() {
     var upper = confirm("Should your password contain uppercase letters?");
     var numbers = confirm("Should your password contain numbers?");
     var special = confirm("Should your password contain special characters?");
-  };
+  }
 
   var length = prompt("How long should your password be (Please choose a character length between 8 and 128.)");
 
@@ -41,26 +41,26 @@ function generatePassword() {
   while (length < 8 || length > 128) {
     alert("Please choose a character length between 8 and 128.");
     var length = prompt("How long should your password be (Please choose a character length between 8 and 128.)");
-  };
+  }
   //checks which character types user selected
   if (lower === true) {
     characters += charLower;
-  };
+  }
   if (upper === true) {
     characters += charUpper;
-  };
+  }
   if (numbers === true) {
     characters += charNumbers;
-  };
+  }
   if (special === true) {
     characters += charSpecial;
-  };
+  }
   var charLength = characters.length;
   var output = '';
 
   //generates password randomly from selected character types
   for (var i = 0; i < length; i++) {
     output += characters.charAt(Math.floor(Math.random() * charLength));
-  };
+  }
   return output;
-};
+}
